@@ -6,32 +6,34 @@ import { Controller, Scene } from "react-scrollmagic";
 import { Tween, Timeline } from "react-gsap";
 
 import "./styles.css";
+import Airpods from "./airpods";
+import AirpodsNoReact from "./airpodsnoreact";
 
 function App() {
-  let introref = useRef(null);
-  let videoref = useRef(null);
-  let text = useRef(null);
+  // let introref = useRef(null);
+  // let videoref = useRef(null);
+  // let text = useRef(null);
 
-  let section = useRef(null);
-  let endText = useRef(null);
+  // let section = useRef(null);
+  // let endText = useRef(null);
 
-  let accelamount = 0.1;
-  let scrollpos = 0;
-  let delay = 0;
-  let textprogress = 0;
+  // let accelamount = 0.1;
+  // let scrollpos = 0;
+  // let delay = 0;
+  // let textprogress = 0;
 
-  useEffect(() => {
-    videoref.currentTime = 1;
-    setInterval(() => {
-      delay += (scrollpos - delay) * accelamount;
-      videoref.currentTime = delay;
-    }, 33.3333);
-    // console.log(videoref.currentTime);
-  }, []);
+  // useEffect(() => {
+  //   videoref.currentTime = 1;
+  //   setInterval(() => {
+  //     delay += (scrollpos - delay) * accelamount;
+  //     videoref.currentTime = delay;
+  //   }, 33.3333);
+  //   // console.log(videoref.currentTime);
+  // }, []);
 
   return (
     <div>
-      <Controller>
+      {/* <Controller>
         <Scene
           duration="9000"
           // triggerElement={introref}
@@ -73,7 +75,9 @@ function App() {
       </Controller>
       <section ref={(el) => (section = el)}>
         <h1 ref={(el) => (endText = el)}>Revolution</h1>
-      </section>
+      </section> */}
+      {/* <Airpods /> */}
+      <AirpodsNoReact />
     </div>
   );
 }
